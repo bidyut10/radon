@@ -27,7 +27,7 @@ const getBooksByChetan = async function (req, res) {
     return res.send({ msg: finaldata })
 }
 const authorOfBook = async function (req, res) {
-    let data = req.body
+    // let data = req.body
     let newPrice = await BookModel.findOneAndUpdate({ name: "Two states" }, { $set: { "price": 100 } }, { new: true })
     let Authordata = await AuthorModel.find({ author_id: newPrice.author_id }).select("author_name")
     return res.send({ msg: Authordata, newPrice })
