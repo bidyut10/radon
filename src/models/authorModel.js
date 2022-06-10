@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 const authorSchema = new mongoose.Schema( {
-    author_id: String,
-    author_name: String,
+    author_Name: String,
     age:Number,
-    address:String
+    address:String,
+    author_Rating: Number
 
 }, { timestamps: true });
 
